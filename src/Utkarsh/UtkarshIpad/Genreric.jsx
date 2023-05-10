@@ -13,6 +13,8 @@ import EducationHello from "../UtkarshImages/EducationHello.png";
 import AccessoriesSlider from "../UtkarshSlider/AccessoriesSlider";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Navbar } from "../../Abhishek/Navbar";
+import { Footer } from "../../Abhishek/Footer";
 
 const Generic = () => {
 const {category}=useParams()
@@ -31,6 +33,8 @@ useEffect(()=>{
   getCat()
 },[])
   return (
+    <>
+    <Navbar/>
     <div style={{ backgroundColor: "rgb(255, 255, 255)" }}>
       <Box className="free_box">
         <Text className="sign_text">
@@ -180,6 +184,9 @@ useEffect(()=>{
         <AccessoriesSlider />
       </Box>
     </div>
+    <Footer/>
+    </>
+    
   );
 };
 
