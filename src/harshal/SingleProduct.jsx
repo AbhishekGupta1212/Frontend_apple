@@ -17,6 +17,8 @@ import { useParams } from "react-router";
 import { StandardSizes } from "./StandardSizes";
 
 import { getSingleProduct } from "../Redux/productsReducer/products.action";
+import { Navbar } from "../Abhishek/Navbar";
+import { Footer } from "../Abhishek/Footer";
 export const SingleProduct = () => {
   const [data, setData] = useState("");
 const [prodData,setProdData]=useState({})
@@ -85,6 +87,7 @@ setProdData(res)
   return (
     <>
       {/* <Navbar /> */}
+      <Navbar/>
       <Heading
         align="center"
         // mt={{ base: "10px", md: "0px" }}
@@ -275,6 +278,7 @@ setProdData(res)
         </Flex>
       </Box>
       {/* <CaptionCarousel /> */}
+      <Footer/>
     </>
   );
 };
